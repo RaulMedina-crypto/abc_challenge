@@ -1,0 +1,95 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    /* Fondo general de la página a color gris (Requisito del reto) */
+    background-color: #e0e0e0; 
+    color: #333333;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+/* Contenedor que organiza las tarjetas en una cuadrícula (Grid) limpia */
+.abc-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Estilo para la tarjeta de cada letra */
+.letra-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.letra-titulo {
+    font-size: 3.5rem;
+    margin: 0 0 10px 0;
+    color: #1a252f;
+}
+/* Tamaño controlado para que las imágenes no se desborden */
+.letra-imagen {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: cover; /* Evita que la foto se deforme */
+    border-radius: 6px;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+figcaption {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+/* ==========================================================================
+   2. COLORES DE LOS H3 (Requisito del reto)
+   ========================================================================== */
+/* Todos los elementos h3 serán VERDES por defecto */
+h3 {
+    font-size: 1.6rem;
+    margin: 10px 0;
+    color: #2e7d32; /* Verde */
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.2s ease; /* Suaviza los cambios de color */
+}
+/* Clase específica para pintar de AZUL tres h3 específicos */
+.texto-azul {
+    color: #1565c0; /* Azul */
+}
+/* Clase diferente para pintar de ROJO un solo h3 específico */
+.texto-rojo {
+    color: #c62828; /* Rojo */
+}
+/* ==========================================================================
+   3. INTERACTIVIDAD (Pseudo-clases HOVER y ACTIVE)
+   ========================================================================== */
+/* --- PASAR EL MOUSE (:hover) --- */
+/* Cambian a un color diferente (Naranja/Coral) al pasar el cursor */
+h3:hover {
+    color: #d84315; 
+}
+.texto-azul:hover {
+    color: #00838f; 
+}
+.texto-rojo:hover {
+    color: #ad1457; 
+}
+/* --- HACER CLIC (:active) --- */
+/* Cambian a un tercer color (Morado) y se encogen un poco al presionarlos */
+h3:active,
+.texto-azul:active,
+.texto-rojo:active {
+    color: #6a1b9a; /* Tercer color requerido */
+    transform: scale(0.92); /* Efecto visual de botón presionado */
+}
